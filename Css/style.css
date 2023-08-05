@@ -153,7 +153,12 @@ nav.sticky {
     z-index: -1000;
 }
 
-
+nav a {
+    color: var(--c4);
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 1px 5px;
+}
 
 /* */
 header .container .content {
