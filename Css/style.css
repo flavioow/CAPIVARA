@@ -19,7 +19,7 @@
     scroll-behavior: smooth;
     font-family: var(--padrao);
 }
- /*
+/*
 body {
     width: 100%;
     height: 3000px;
@@ -27,6 +27,22 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 } */
+
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 20px;
+    border-radius: 20px;
+    height: 100px;
+    padding: 5px;
+    border: 10px solid #fff;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--c4);
+    border: 6px solid #fff;
+    border-radius: 20px;
+}
 
 /* Display Flex */
 .flex {
@@ -96,22 +112,31 @@ body {
 }
 /* Blurs */
 
+.hide {
+    display: none;
+}
+
 header {
     padding: 20px 100px;
     align-items: center;
     position: fixed;
     width: 100vw;
+    user-select: none;
+    margin-top: -150px;
+    z-index: 2;
 }
 
 .logo {
     width: 60px;
     height: 60px;
+    margin-left: -110px;
 }
 
-ion-icon {
+header ion-icon {
     width: 23px;
     height: 23px;
     color: var(--c4);
+    margin: 0 5px;
 }
 
 nav {
@@ -119,6 +144,7 @@ nav {
     position: fixed;
     width: 100vw;
     transition: .15s;
+    margin-top: -45px;
 }
 
 nav.sticky {
@@ -132,4 +158,96 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     padding: 1px 5px;
+}
+
+/* */
+header .container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinhar a lupa e a caixa de pesquisa verticalmente */
+}
+
+/* Adicionando estilo para o contêiner de pesquisa */
+#searchContainer {
+    display: flex;
+    align-items: center; /* Alinhar a lupa e a caixa de pesquisa verticalmente */
+    border-bottom: 1px solid var(--c4); /* Adicionando uma linha em baixo */
+    padding: 5px; /* Adicionando um espaçamento interno */
+    visibility: hidden; /* Escondendo o contêiner de pesquisa por padrão */
+    opacity: 0; /* Definindo a opacidade para 0 */
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s; /* Adicionando transição para suavizar a exibição */
+}
+
+/* Estilizando a lupa */
+#searchIcon {
+    width: 23px;
+    height: 23px;
+    color: var(--c4);
+    margin-right: 5px; /* Adicionando um espaçamento entre a lupa e a caixa de pesquisa */
+    cursor: pointer; /* Transformando o cursor em uma mãozinha ao passar por cima */
+}
+
+/* Estilizando a lupa preenchida */
+#searchIcon.search {
+    color: #000; /* Troque a cor para a desejada quando o ícone estiver preenchido */
+}
+
+/* Estilizando a caixa de pesquisa */
+#searchInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 150px; /* Ajuste a largura conforme necessário */
+    color: var(--c4);
+}
+
+/* Exibindo o contêiner de pesquisa quando a classe "show" é adicionada */
+#searchContainer.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+main {
+    margin: 150px auto 0 auto;
+    max-width: 1000px;
+    padding: 50px 0;
+}
+
+aside {
+    width: 100%;
+    background: var(--c0);
+    padding: 20px 40px;
+    cursor: default;
+}
+
+aside .container {
+    align-items: center;
+}
+
+aside .container .content {
+    margin: 0 5px;
+    max-width: 160px;
+}
+
+aside ion-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--c4);
+}
+
+aside h2 {
+    font-size: 1.3em;
+    color: var(--c4);
+}
+
+aside p, a {
+    font-size: .95em;
+    color: var(--c4);
+}
+
+aside a {
+    color: var(--c4);
 }
