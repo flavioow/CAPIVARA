@@ -390,7 +390,7 @@ aside a {
         outline: none;
         background-color: transparent;
         font-size: 16px;
-        width: 300px; /* Ajuste a largura conforme necessário */
+        width: 250px; /* Ajuste a largura conforme necessário */
         color: var(--c4);
         z-index: 10;
     }
