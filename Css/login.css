@@ -1,0 +1,124 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.container {
+    width: 55%;
+    height: 100%;
+}
+
+.container:first-child {
+    width: 45%;
+    background: var(--c4);
+    overflow: hidden;
+}
+
+.container:last-child {
+    padding: 80px 50px;
+}
+
+.container:last-child .content > a {
+    text-decoration: none;
+    color: var(--c4);
+    user-select: none;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: var(--logo);
+    margin-left: 15px;
+}
+
+.searchContainer {
+    border-bottom: 1px solid var(--c4);
+    padding: 5px;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+    width: 425px;
+}
+
+input[type="text"], input[type="password"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+    color: var(--c4);
+    margin-top: 30px;
+    cursor: text;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background: var(--c4);
+    color: #fff;
+    padding: 20px 0;
+    width: 425px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bolder;
+    margin-top: 25px;
+    transition: .2s;
+}
+
+input[type="submit"]:hover {
+    color: var(--c0);
+    transition: .2s;
+    cursor: pointer;
+}
+
+aside {
+    user-select: none;
+    color: var(--c3);
+    margin-top: 15px;
+    width: 100%;
+}
+
+aside input[type="checkbox"]:hover {
+    cursor: pointer;
+    border: var(--c4);
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--c3);
+}
+
+p {
+    color: var(--c3);
+    margin-top: 10px;
+}
+
+p > a {
+    color: var(--c4);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.content:nth-child(3n) {
+    margin: 20px 0;
+}
+
+.div {
+    background: var(--c2);
+    width: 200px;
+    height: 1px;
+}
+
+span {
+    margin: 0 5px;
+    color: var(--c3);
+}
+
+@media (max-width: 1000px) {
+    
+}

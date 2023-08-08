@@ -5,60 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capivara</title>
     <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/index.css">
     <link rel="shortcut icon" href="../Img/logo.svg" type="image/x-icon">
+    <script src="../Js/app.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../Js/app.js"></script>
-    <script>
-        window.addEventListener("scroll", function(){
-            var nav = document.querySelector("nav")
-            nav.classList.toggle("sticky", window.scrollY > 0)
-        })
-        document.addEventListener("DOMContentLoaded", function() {
-            const searchIcon = document.getElementById("searchIcon");
-            const searchContainer = document.getElementById("searchContainer");
-            const searchInput = document.getElementById("searchInput");
-
-            searchIcon.addEventListener("click", function() {
-                searchContainer.classList.toggle("hide");
-                searchIcon.classList.toggle("search-outline"); // Adiciona ou remove a classe "search-outline"
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            const searchIcon = document.getElementById("searchIcon");
-            const searchContainer = document.getElementById("searchContainer");
-
-            searchIcon.addEventListener("click", function() {
-                if (searchContainer.classList.contains("hide")) {
-                    searchIcon.classList.remove("search");
-                    searchIcon.classList.add("search-outline");
-                } else {
-                    searchIcon.classList.remove("search-outline");
-                    searchIcon.classList.add("search");
-                }
-                searchContainer.classList.toggle("hide");
-                searchContainer.classList.toggle("show"); // Adiciona ou remove a classe "show"
-            });
-        });
-    </script>
 </head>
 <body>
-    <header class="flexbetween blur5">
+    <header class="flexbetween blur5 aligncenter">
         <div class="container">
-            <div class="content">
+            <div class="content aligncenter">
                 <ion-icon name="search-outline" id="searchIcon"></ion-icon>
-                <div id="searchContainer" class="flexcenter hide">
+                <div id="searchContainer" class="flexcenter hide aligncenter">
                     <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
                 </div>
             </div>
         </div>
         <div class="container">
-            <a href="index.html"><img src="../Img/logo1.svg" alt="capivara" class="logo"></a>
+            <a href="index.html" class="flexcenter aligncenter">
+                <img src="../Img/logo.svg" alt="capivara" class="logo">
+                <h1>Capivara</h1>
+            </a>
         </div>
         <div class="container">
             <ion-icon name="heart-outline"></ion-icon> 
             <ion-icon name="bag-outline"></ion-icon>
-            <ion-icon name="person-circle-outline"></ion-icon>
+            <a href="login.html">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a>
         </div>
     </header>
     <nav class="flexcenter">
@@ -67,9 +41,9 @@
         <a href="#">Calças</a>
     </nav>
 
-    <main>
+    <main class="aligncenter">
         <aside class="flexaround">
-            <div class="container flexcenter">
+            <div class="container flexcenter aligncenter">
                 <div class="content">
                     <ion-icon name="card-outline"></ion-icon>
                 </div>
@@ -78,7 +52,7 @@
                     <p>Por dinheiro, cartão de crédito e PIX.</p>
                 </div>
             </div>
-            <div class="container flexcenter">
+            <div class="container flexcenter aligncenter">
                 <div class="content">
                     <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
                 </div>
@@ -87,7 +61,7 @@
                     <p>Por <a href="https://www.instagram.com/direct/t/17842009043278152/" target="">direct</a> e <a href="api.whatsapp.com/send?phone=5511984577114&text=Quero+saber+sobre+a+linha+de+moletons+capivara%21%21" target="_blank">Whatsapp</a>.</p>
                 </div>
             </div>
-            <div class="container flexcenter">
+            <div class="container flexcenter aligncenter">
                 <div class="content">
                     <ion-icon name="shield-checkmark-outline"></ion-icon>
                 </div>
