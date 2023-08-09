@@ -17,7 +17,11 @@
             <div class="content flexcenter aligncenter">
                 <ion-icon name="search-outline" id="searchIcon"></ion-icon>
                 <div id="searchContainer" class="flexcenter hide aligncenter">
-                    <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
+                    <form action="" method="post" name="formsearch" class="flexbetween">
+                        <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
+                        <input type="submit" id="submitInput" value="Pesquisar" class="hide">
+                    </form>
+                    <div id="filterDiv" class="filtro hide">Filtro</div>
                 </div>
             </div>
         </div>
@@ -71,6 +75,10 @@
                 </div>
             </div>
         </aside>
+
+        <section>
+            
+        </section>
     </main>
 </body>
 </html>

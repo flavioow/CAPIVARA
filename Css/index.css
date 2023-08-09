@@ -94,7 +94,7 @@ header .container .content {
     background: transparent;
     padding: 1px 2px;
     font-size: 17px;
-    width: 1000vw;
+    width: 750px;
     color: var(--c4);
 }
 
@@ -107,6 +107,36 @@ header .container .content {
 /* Estilo para o input quando estiver em largura total */
 .fullwidth {
     width: 100%;
+}
+
+#submitInput {
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background: var(--c4);
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 1em;
+    transition: .5s;
+}
+
+#submitInput:hover {
+    color: var(--c0);
+    transition: .2s;
+    cursor: pointer;
+}
+
+#filterDiv {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 1em;
+    transition: .5s;
+}
+
+#filterDiv:hover {
+    color: var(--c4);
+    transition: .2s;
+    cursor: pointer;
 }
 
 main {

@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Parte 4
+
+// Parte 4
+
 // Aguarda o carregamento do conteúdo HTML antes de executar o código
 document.addEventListener("DOMContentLoaded", function() {
     // Obtém referências para os elementos relevantes no DOM
@@ -47,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("searchInput"); // Campo de entrada de pesquisa
     const headerLogo = document.querySelector(".header-logo"); // Logotipo do cabeçalho
     const headerIcons = document.querySelector(".header-icons"); // Ícones do cabeçalho
+
+    // Referência aos elementos de submit e filtro
+    const submitInput = document.getElementById("submitInput");
+    const filterDiv = document.getElementById("filterDiv");
 
     // Define um evento de clique para o ícone de pesquisa
     searchIcon.addEventListener("click", function() {
@@ -64,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (searchContainer.classList.contains("show")) {
             // Se o contêiner de pesquisa está visível, exibe o campo de entrada
             searchInput.style.display = "block";
+            // Exibe o elemento de submit
+            submitInput.style.display = "block";
+            // Exibe a div de filtro
+            filterDiv.style.display = "block";  
             // Altera o nome do ícone de pesquisa para "search"
             searchIcon.setAttribute("name", "search");
             // Adiciona a classe "fullwidth" ao campo de entrada para ajustar a largura
@@ -71,6 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             // Se o contêiner de pesquisa está oculto, oculta o campo de entrada
             searchInput.style.display = "none";
+            // Oculta o elemento de submit
+            submitInput.style.display = "none";
+            // Oculta a div de filtro
+            filterDiv.style.display = "none";
             // Restaura o nome do ícone de pesquisa para "search-outline"
             searchIcon.setAttribute("name", "search-outline");
             // Remove a classe "fullwidth" do campo de entrada
