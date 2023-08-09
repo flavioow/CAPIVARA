@@ -116,6 +116,9 @@ body::-webkit-scrollbar-thumb {
 .hide {
     display: none;
 }
+.displayblock {
+    display: block;
+}
 /* Hide */
 
 /* Align */
@@ -131,3 +134,7 @@ body::-webkit-scrollbar-thumb {
     align-items: end;
 }
 /* Align */
+
+/* Display */
+
+/* Display */

@@ -7,6 +7,11 @@ header {
     z-index: 2;
 }
 
+header .container:first-child .content {
+    height: 60px;
+    width: 100%;
+}
+
 header .container:nth-child(2n) a {
     text-decoration: none;
     color: var(--c4);
@@ -15,7 +20,6 @@ header .container:nth-child(2n) a {
 .logo {
     width: 60px;
     height: 60px;
-    margin-left: -77px;
 }
 
 h1 {
@@ -59,13 +63,13 @@ header .container .content {
 }
 
 /* Adicionando estilo para o contêiner de pesquisa */
-#searchContainer {
+.searchContainer {
     display: flex;
     border-bottom: 1px solid var(--c4); /* Adicionando uma linha em baixo */
     padding: 5px; /* Adicionando um espaçamento interno */
-    visibility: hidden; /* Escondendo o contêiner de pesquisa por padrão */
-    opacity: 0; /* Definindo a opacidade para 0 */
+    display: none;
     transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s; /* Adicionando transição para suavizar a exibição */
+    width: 100%;
 }
 
 /* Estilizando a lupa */
@@ -85,20 +89,25 @@ header .container .content {
 /* Estilizando a caixa de pesquisa */
 #searchInput {
     border: none;
+    border-bottom: 1px solid var(--c2);
     outline: none;
-    background-color: transparent;
-    font-size: 16px;
-    width: 150px; /* Ajuste a largura conforme necessário */
+    background: transparent;
+    padding: 1px 2px;
+    font-size: 17px;
+    width: 1000vw;
     color: var(--c4);
 }
 
 /* Exibindo o contêiner de pesquisa quando a classe "show" é adicionada */
-#searchContainer.show {
-    visibility: visible;
-    opacity: 1;
+.searchContainer.show {
+    display: block;
     transition: opacity 0.2s ease-in-out;
 }
 
+/* Estilo para o input quando estiver em largura total */
+.fullwidth {
+    width: 100%;
+}
 
 main {
     margin: 150px auto 0 auto;
