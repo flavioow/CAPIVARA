@@ -43,7 +43,7 @@ h1 {
     width: 425px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
     border: none;
     outline: none;
     background: transparent;
@@ -173,7 +173,7 @@ span {
         width: 100%;
     }
     
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"], input[type="email"] {
         border: none;
         outline: none;
         background: transparent;
@@ -210,7 +210,7 @@ span {
         width: 100%;
     }
     
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"], input[type="email"] {
         border: none;
         outline: none;
         background: transparent;

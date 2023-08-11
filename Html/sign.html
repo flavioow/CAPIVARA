@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/login.css">
+    <link rel="shortcut icon" href="../Img/logo.svg" type="image/x-icon">
+    <script src="../Js/app.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Função para formatar o CPF
+        function formatCPF(cpf) {
+          cpf = cpf.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+          cpf = cpf.slice(0, 11); // Limita a 11 números
+          cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+          cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+          cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+          return cpf;
+        }
+      
+        // Função para atualizar o campo enquanto o usuário digita
+        function updateCPFField(input) {
+          input.value = formatCPF(input.value);
+        }
+      
+        // Pega o elemento do campo CPF
+        const cpfInput = document.getElementById('cpf');
+      
+        // Adiciona um ouvinte de evento para atualizar o campo enquanto o usuário digita
+        cpfInput.addEventListener('input', function () {
+          updateCPFField(this);
+        });
+      </script>
+</head>
+<body>
+    <main class="aligncenter flexcenter">
+        <div class="container flexcenter aligncenter">
+        </div>
+        <div class="container">
+            <div class="content flexcenter aligncenter">
+                <a href="index.html" class="flexcenter aligncenter">
+                    <img src="../Img/logo.svg" alt="Capivara" class="logo">
+                    <h1>Capivara</h1>
+                </a>
+            </div>
+            <div class="content flexcenter aligncenter">
+                <form action="index.html" method="post" name="formlogin">
+                    <div class="searchContainer flex"><input type="email" name="email" id="email" placeholder="Informe seu e-mail*" required></div>
+                    <div class="searchContainer flex"><input type="password" name="senha" id="senha" placeholder="Informe sua senha*" required></div>
+                    <div class="searchContainer flex"><input type="text" name="cpf" id="cpf" placeholder="Informe seu CPF*" required onkeyup="updateCPFField(this)"></div>
+                    <div class="searchContainer flex"><input type="text" name="endereco" id="endereco" placeholder="Informe seu endereço*" required></div>
+                    <aside class="flexbetween aligncenter">
+                        <br class="br">
+                        <label for="masc" style="cursor: pointer;"><input type="radio" name="sexo" id="masc" style="cursor: pointer;"> Masculino</label>
+                        <label for="fem" style="cursor: pointer;"><input type="radio" name="sexo" id="fem" style="cursor: pointer;"> Feminino</label>
+                    </aside>
+                    <input type="submit" name="enviar" id="enviar" value="Cadastre-se">
+                    <p>Você já possui uma conta? <a href="login.html">Entre</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
