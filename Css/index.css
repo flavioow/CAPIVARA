@@ -20,12 +20,14 @@ header .container:nth-child(2n) a {
 .logo {
     width: 60px;
     height: 60px;
+    opacity: .85;
 }
 
 h1 {
     font-size: 2em;
     font-family: var(--logo);
     margin-left: 15px;
+    opacity: .85;
 }
 
 header ion-icon {
@@ -186,29 +188,34 @@ article {
 section {
     flex-wrap: nowrap;
     width: 100%;
-    height: 550px;
+    height: 500px;
     margin: 20px 0;
 }
 
-section .container {
+section .container, section a {
     width: 250px;
     height: 100%;
     background: var(--c0);
+    transition: .4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section .container:hover, section a:hover {
+    box-shadow: 0 0 20px #00000025;
+    transition: .7s;
 }
 
 section .container .content:first-child {
-    height: 75%;
+    height: 80%;
     overflow: hidden;
 }
 
 section .container .content {
     width: 100%;
-    height: 25%;
+    height: 20%;
     background: #fff;
-}
-
-section .container .content img {
-    
+    padding: 5px 15px;
 }
 
 section .container .content p {
