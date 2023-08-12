@@ -5,6 +5,7 @@ header {
     user-select: none;
     margin-top: -150px;
     z-index: 2;
+    user-select: none;
 }
 
 header .container:first-child .content {
@@ -43,6 +44,7 @@ nav {
     width: 100vw;
     transition: .15s;
     margin-top: -45px;
+    user-select: none;
 }
 
 nav.sticky {
@@ -209,6 +211,7 @@ section .container:hover, section a:hover {
 section .container .content:first-child {
     height: 80%;
     overflow: hidden;
+    user-select: none;
 }
 
 section .container .content {
@@ -238,6 +241,7 @@ footer {
 
 footer p {
     font-size: .8em;
+    user-select: none;
 }
 
 footer a {
