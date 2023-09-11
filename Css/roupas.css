@@ -22,6 +22,10 @@ header a ion-icon {
 }
 
 main {
+    user-select: none;
+}
+
+main {
     height: 89.1%;
 }
 

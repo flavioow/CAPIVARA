@@ -154,6 +154,7 @@ aside {
     background: var(--c0);
     padding: 20px 40px;
     cursor: default;
+    user-select: none;
 }
 
 aside .container .content {
